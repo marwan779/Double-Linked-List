@@ -30,12 +30,12 @@ void Insert_Node_At_Beginning(struct node_t **HEAD) // this function will modify
     }
 }
 
-void Insert_Node_At_End(struct node_t *HEAD)
+void Insert_Node_At_End(struct node_t **HEAD)
 {
-    struct node_t *temp_node = NULL, *node_counter = HEAD;
+    struct node_t *temp_node = NULL, *node_counter = *HEAD;
     uint32 lenght;
     temp_node = (struct node_t *)malloc(sizeof(struct node_t));
-    lenght = Get_Lenght(HEAD);
+    lenght = Get_Lenght(*HEAD);
     if (temp_node == NULL)
     {
         printf("Error Creating The New Node :) \n");
@@ -48,7 +48,7 @@ void Insert_Node_At_End(struct node_t *HEAD)
         {
             temp_node->node_lift_link = NULL;
             temp_node->node_right_link = NULL;
-            (HEAD) = temp_node;
+            (*HEAD) = temp_node;
         }
         else // the list is not empyt
         {
@@ -100,7 +100,7 @@ void Insert_Node_After(struct node_t *HEAD)
         }
         else
         {
-            Insert_Node_At_End(HEAD);
+            Insert_Node_At_End(&HEAD);
         }
     }
 }
