@@ -11,7 +11,7 @@ struct node_t
 };
 
 void Insert_Node_At_Beginning(struct node_t **HEAD);
-void Insert_Node_At_End(struct node_t *HEAD);
+void Insert_Node_At_End(struct node_t **HEAD);
 void Insert_Node_After(struct node_t *HEAD);
 void Insert_Node_Before(struct node_t **HEAD);
 void Delete_Node_At_Beginning(struct node_t **HEAD);
