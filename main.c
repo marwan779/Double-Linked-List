@@ -31,7 +31,7 @@ int main()
                 Insert_Node_At_Beginning(&LIST);
                 break;
             case 2:
-                Insert_Node_At_End(LIST);
+                Insert_Node_At_End(&LIST);
                 break;
             case 3 : 
                 Insert_Node_After(LIST);
